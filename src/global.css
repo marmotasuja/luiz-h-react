@@ -1,0 +1,72 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-page);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background: var(--color-bg-card);
+  width: 360px;
+  padding: calc(var(--space) * 2);
+  border-radius: var(--radius-lg);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  width: 100%;
+  padding: var(--space);
+
+  background: var(--color-bg-page);
+  color: var(--color-text);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+
+  outline: none;
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+input:focus {
+  border-color: var(--color-gradient-start);
+}
+
+button {
+  width: 100%;
+  padding: var(--space);
+
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+
+  color: white;
+  font-weight: bold;
+
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+
+  transition:
+    transform var(--transition-speed) var(--transition-ease),
+    opacity var(--transition-speed) var(--transition-ease);
+}
+
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
