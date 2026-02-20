@@ -1,16 +1,15 @@
 :root {
-  --color-bg-page: #0f0f12;
-  --color-bg-card: #1a1a20;
-  --color-text: #eaeaf0;
 
-  --color-gradient-start: #7c3aed;
-  --color-gradient-end: #22c55e;
-
-  --radius-sm: 8px;
-  --radius-lg: 20px;
-
-  --space: 16px;
-
-  --transition-speed: 0.3s;
-  --transition-ease: ease-in-out;
+  --bg-page: #111111;
+  --bg-card: #1e1e1e;
+  --text: #ffffff;
+  --gradient-1: #8b5cf6;
+  --gradient-2: #10b981;
+  
+  --radius-small: 35px;
+  --radius-large: 25px;
+  --space: 17px;
+  
+  --transition-time: 0.3s;
+  --transition-curve: ease-in-out;
 }

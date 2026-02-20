@@ -1,72 +1,74 @@
-html, body {
-  height: 100%;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background: var(--color-bg-page);
-  color: var(--color-text);
-  font-family: system-ui, sans-serif;
 
+body {
+  background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+  color: var(--text);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: Arial, sans-serif;
 }
+
 
 main {
-  background: var(--color-bg-card);
-  width: 360px;
+  background: var(--text);
+  border-radius: var(--radius-large);
   padding: calc(var(--space) * 2);
-  border-radius: var(--radius-lg);
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--space);
-
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
+h1 {
+  color: var(--bg-card);
+  text-align: center;
+  margin-bottom: var(--space);
+}
+
+p {
+  color: var(--bg-card);
+  text-align: center;
+  margin-bottom: calc(var(--space) * 2);
+  opacity: 0.8;
+}
+
 
 input {
   width: 100%;
   padding: var(--space);
-
-  background: var(--color-bg-page);
-  color: var(--color-text);
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-sm);
-
+  margin-bottom: var(--space);
+  background: var(--bg-page);
+  border: 2px solid #333;
+  border-radius: var(--radius-small);
+  color: var(--text);
   outline: none;
-  transition: border-color var(--transition-speed) var(--transition-ease);
+  transition: border-color var(--transition-time) var(--transition-curve);
 }
 
 input:focus {
-  border-color: var(--color-gradient-start);
+  border-color: var(--bg-card);
 }
+
 
 button {
   width: 100%;
   padding: var(--space);
-
-  background-image: linear-gradient(
-    to right,
-    var(--color-gradient-start),
-    var(--color-gradient-end)
-  );
-
-  color: white;
+  background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+  color: rgb(0, 0, 0);
   font-weight: bold;
-
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-small);
   cursor: pointer;
-
-  transition:
-    transform var(--transition-speed) var(--transition-ease),
-    opacity var(--transition-speed) var(--transition-ease);
+  transition: all var(--transition-time) var(--transition-curve);
 }
 
 button:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
   opacity: 0.9;
 }
